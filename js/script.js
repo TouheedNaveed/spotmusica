@@ -135,6 +135,9 @@ async function main() {
     //Volume change event listener
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
         currentsong.volume=parseInt(e.target.value)/100;
+        if(currentsong.volume>0){
+            document.querySelector(".volume>img").src=document.querySelector(".volume>img").src.replace("mute.svg","volumehigh.svg");
+        }
     })
 
     //aadd event listener to mute
@@ -143,6 +146,7 @@ async function main() {
             e.target.src=e.target.src.replace("volumehigh.svg","mute.svg");
             currentsong.volume=0;
             document.querySelector(".range").getElementsByTagName("input")[0].value=0;
+            
         }
         else{
             e.target.src=e.target.src.replace("mute.svg","volumehigh.svg");
