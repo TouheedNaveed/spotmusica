@@ -23,7 +23,7 @@ async function getSongs(folder) {
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
-    let as = div.getElementsByTagName("a")
+    let as = div.getElementsByTagName("a");
     songs=[];
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
@@ -68,6 +68,7 @@ const playMusic = (track, pause = false) => {
 }
 async function displayAlbums() {
     let a = await fetch(`http://127.0.0.1:5500/songs/`)
+    console.log(a)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML=response;
@@ -80,7 +81,7 @@ async function main() {
     playMusic(songs[0], true);
 
     //Display all the albums on the page 
-    displayAlbums();
+    await displayAlbums();
 
 
     //Attach an event listener to play ,previous and next song button
