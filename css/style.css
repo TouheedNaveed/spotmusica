@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --a:0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.cross {
+    display: none;
+}
+
+.cross img {
+    height: 25px;
+    width: 25px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger img {
+    height: 25px;
+    width: 25px;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+    margin: 15px 0px;
+    position: relative;
+}
+
+.home ul li {
+    width: 15px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.heading img {
+    width: 20px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 23px 14px;
+    font-weight: 700;
+    font-size: 12px;
+
+}
+
+.library {
+    min-height: 72vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    font-size: 13px;
+    gap: 13px;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 15px;
+}
+
+.footer a {
+    color: grey;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(39, 37, 37);
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.larrow {
+    width: 12px;
+    cursor: pointer;
+}
+
+.rarrow {
+    width: 12px;
+    cursor: pointer;
+}
+
+.spotifyPlaylist {
+    padding: 15px;
+}
+
+.card {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #272525;
+    position: relative;
+    transition: all 0.9s;
+}
+.card:hover{
+    background-color: rgb(110, 110, 110);
+    cursor: pointer;
+    --a:1;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    margin: 30px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.svg-container {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    opacity: var(--a);
+    transition: all 0.9s ease-out;
+
+}
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
+.signupbtn {
+    background-color: #272525;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    color: grey;
+}
+
+.loginbtn {
+    background-color: black;
+    color: grey;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    color: white;
+    background-color: rgb(19, 17, 17);
+}
+
+.playbar {
+    position: absolute;
+    border-radius: 5px;
+    bottom: 25px;
+    background-color: #918c8c93;
+    padding: 12px 0px;
+    width: 68vw;
+    min-height: 30px;
+    left: 20px;
+}
+
+.songbuttons {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.pbtn {
+    width: 15px;
+    cursor: pointer;
+}
+
+.songlist ul {
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    max-height: 48vh;
+}
+
+.songlist ul li {
+    list-style: none;
+    list-style-type: decimal;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.seekbar {
+    height: 3px;
+    background-color: white;
+    width: 99%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.circle {
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: orangered;
+    transition: left 0.5s;
+}
+
+.fbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 12px;
+
+}
+.info div{
+    word-break: break-all;
+}
+.songinfo{
+    width: 300px;
+}
+.songtime{
+    display: flex;
+    justify-content: end;
+    width: 100px;
+}
+.vt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.volume{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width:1400px) {
+    .left {
+        background-color: black;
+        position: absolute;
+        left: -100%;
+        transition: all 1s;
+        z-index: 1;
+        height: 96vh;
+        width: 40vh;
+    }
+
+    .cross {
+        display: block;
+    }
+
+    .right {
+        width: 100vw;
+        height: 95vh;
+        margin: 0;
+    }
+
+    .playbar {
+        width: calc(100vw - 40px);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .logo {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 100vw;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #272525;
+        position: relative;
+    }
+
+    .cardContainer {
+        margin: 0;
+        margin-top: 20px;
+    }
+    .spotifyPlaylist h1 {
+        text-align: center;
+    }
+
+    .fbox {
+        flex-direction: column;
+        gap: 16px;
+        font-size: 16px;
+    }
+    .songinfo,.songtime{
+        text-align: center;
+        width: auto;
+    }
+    .songbuttons{
+        margin: 0;
+    }
+    .volume{
+        flex-direction: column;
+    }
+    .vt{
+        gap: 100px;
+    }
+}
+
+@media (max-width:500px) {
+    .cardContainer{
+        max-height: 60vh;
+    }
+    .volume{
+        gap: 0px;
+    }
+    .vt{
+        gap: 30px;
+    }
+}

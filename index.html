@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpotMusica - World of Music</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+</head>
+
+<body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" src="img/logo.svg" alt="logo" />
+                    <a style="color: white; text-decoration: none" href="/"><span>Spot-Musica</span></a>
+                    <div class="cross">
+                        <img class="invert pbtn" src="img/cross.svg" alt="" />
+                    </div>
+                </div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="home" />Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="search" />Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="img/library.svg" alt="library" />
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songlist">
+                    <ul></ul>
+                </div>
+
+                <div class="footer">
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/"><span>Legal</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/safetyandprivacy/"><span>Privacy Center</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/cookies-policy/"><span>Cookies</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/accessibility/"><span>Accessibility</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right rounded bg-grey">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburger">
+                        <img class="invert pbtn" src="img/hamburger.svg" alt="" />
+                    </div>
+                    <div class="larrow invert">
+                        <img src="img/left-arrow.svg" alt="left-arrow" />
+                    </div>
+                    <div class="rarrow invert">
+                        <img src="img/right-arrow.svg" alt="right-arrow" />
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign Up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+                <h1>Spot-Musica Playlists</h1>
+                <div class="cardContainer">
+                    <div class="card" data-folder="ncs">
+                        <img src="/songs/ncs/cover.jpg" alt="card" />
+                        <div class="svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon">
+                                <path
+                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                            </svg>
+                        </div>
+                        <h2>NCS - No Copyright</h2>
+                        <p>Calm your Anger</p>
+                    </div>
+                    <div class="card" data-folder="cs">
+                        <img src="/songs/cs/cover.jpg" alt="card" />
+                        <div class="svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon">
+                                <path
+                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                            </svg>
+                        </div>
+                        <h2>Sidhu Moosewala</h2>
+                        <p>BYG BIRD</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="fbox">
+                        <div class="songinfo"></div>
+                        <div class="songbuttons">
+                            <img id="previous" class="pbtn" src="img/prev.svg" alt="previous" />
+                            <img id="play" class="pbtn" src="img/pause.svg" alt="play" />
+                            <img id="next" class="pbtn" src="img/next.svg" alt="next" />
+                        </div>
+                        <div class="vt">
+                            <div class="songtime"></div>
+                            <div class="volume">
+                                <img class="pbtn invert" src="img/volumehigh.svg" alt="" />
+                                <div class="range">
+                                    <input type="range" name="volume" id="volume">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
