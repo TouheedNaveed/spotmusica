@@ -26,6 +26,8 @@ body {
 
 .cross {
     display: none;
+    position: absolute;
+    right: 20px;
 }
 
 .cross img {
@@ -306,84 +308,105 @@ body {
     gap: 10px;
 }
 
-@media (max-width:1400px) {
+@media (max-width: 1024px) {
     .left {
         background-color: black;
         position: absolute;
         left: -100%;
         transition: all 1s;
         z-index: 1;
-        height: 96vh;
-        width: 40vh;
+        height: 90vh;
+        width: 70vh;
     }
-
     .cross {
         display: block;
     }
-
     .right {
         width: 100vw;
-        height: 95vh;
+        height: 100vh;
         margin: 0;
+        padding: 0;
+        overflow-y: auto;
     }
-
-    .playbar {
-        width: calc(100vw - 40px);
-    }
-
     .hamburger {
         display: block;
         cursor: pointer;
     }
+    .card {
+        width: 45%;
+    }
 
-    .logo {
-        justify-content: space-between;
+    .playbar {
+        width: 90vw;
+    }
+    .spotifyPlaylist h1{
+        text-align: center;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left{
+        background-color: black;
+        position: absolute;
+        left: -100%;
+        transition: all 1s;
+        z-index: 1;
+        height: 90vh;
+        width: 50vh;
+    .right {
+        width: 100%;
     }
 
     .card {
-        width: 100vw;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #272525;
-        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .cardContainer {
-        margin: 0;
-        margin-top: 20px;
-    }
-    .spotifyPlaylist h1 {
-        text-align: center;
+    .playbar {
+        width: 95vw;
     }
 
     .fbox {
         flex-direction: column;
-        gap: 16px;
-        font-size: 16px;
+        gap: 10px;
     }
-    .songinfo,.songtime{
+
+    .songinfo,
+    .songtime {
         text-align: center;
         width: auto;
     }
-    .songbuttons{
+
+    .songbuttons {
         margin: 0;
     }
-    .volume{
+
+    .volume {
         flex-direction: column;
     }
-    .vt{
-        gap: 100px;
+
+    .vt {
+        gap: 30px;
     }
 }
 
-@media (max-width:500px) {
-    .cardContainer{
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+    .cardContainer {
         max-height: 60vh;
     }
-    .volume{
-        gap: 0px;
+
+    .vt {
+        gap: 10px;
     }
-    .vt{
-        gap: 30px;
+
+    .volume {
+        flex-direction: column;
+        gap: 10px;
     }
+}
 }
